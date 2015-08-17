@@ -1,0 +1,8 @@
+C:\ThirdCorner\ThirdCorner.Base\ThirdCorner.Base\obj\Debug\ThirdCorner.Base.csprojResolveAssemblyReference.cache
+C:\ThirdCorner\ThirdCorner.Base\ThirdCorner.Base\bin\Debug\ThirdCorner.Base.dll
+C:\ThirdCorner\ThirdCorner.Base\ThirdCorner.Base\bin\Debug\ThirdCorner.Base.pdb
+C:\ThirdCorner\ThirdCorner.Base\ThirdCorner.Base\bin\Debug\log4net.dll
+C:\ThirdCorner\ThirdCorner.Base\ThirdCorner.Base\bin\Debug\log4net.pdb
+C:\ThirdCorner\ThirdCorner.Base\ThirdCorner.Base\bin\Debug\log4net.xml
+C:\ThirdCorner\ThirdCorner.Base\ThirdCorner.Base\obj\Debug\ThirdCorner.Base.dll
+C:\ThirdCorner\ThirdCorner.Base\ThirdCorner.Base\obj\Debug\ThirdCorner.Base.pdb

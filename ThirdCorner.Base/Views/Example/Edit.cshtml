@@ -1,0 +1,40 @@
+﻿@model ThirdCorner.Base.Models.EditExampleViewModel
+
+@{
+    ViewBag.Title = "Edit User";
+}
+@section title
+{
+    <h2>Edit Product Category</h2>
+}
+
+<form method="POST" action="@Url.Action("Save", "Example", new {id=Model.User.UserId})" id="editForm">
+    <ul>
+        <li>
+            <label class="hideLabel" for="fullName">Full Name: </label>
+            <input type="text" name="fullName" id="fullName" value="@Model.User.FullName" placeholder="Full Name" maxlength="50" data-validationtype="required" data-errormessage="Full Name is required" />
+        </li>
+        <li>
+            <label class="hideLabel" for="userName">User Name: </label>
+            <input type="text" name="userName" id="userName" value="@Model.User.UserName" placeholder="User Name" maxlength="50" data-validationtype="required" data-errormessage="User Name is required"/>
+        </li>
+        <li>
+            <label class="hideLabel" for="isAdmin">Is Admin: </label>
+            <input type="checkbox" name="isAdmin" id="isAdmin" @(Model.User.IsAdmin ? "checked='checked'" : "") />
+        </li>
+    </ul>
+    <button class="button" type="submit">
+        <i class="icon-save"></i> Save User
+    </button>
+</form>
+
+@section onload
+{
+    registerForm('editForm');
+}
+@section afterScripts
+{
+    <script src="@Url.Content("~/scripts/validation.js")"></script>
+}
+
+

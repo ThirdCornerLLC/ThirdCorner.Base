@@ -1,0 +1,32 @@
+﻿@using ThirdCorner.Base.Controls
+@model ThirdCorner.Base.Models.ExampleViewModel
+<div class="content">
+    <div class="sub-heading">
+        <div class="row">
+            <div class="col-sm-10"><h2 class="sub-title">Search Results</h2></div>
+            <div class="col-sm-2"><input type="button" class="btn pull-right" value="Export" onclick="doSearch(false, true) " /></div>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-main table-striped table-condensed">
+            <thead>
+                <tr>
+                    <th id="colFullName"><a href="javascript:doSort('FullName')">Full Name</a></th>
+                    <th id="colUserName"><a href="javascript:doSort('UserName')">User Name</a></th>
+                    <th id="colIsAdmin"><a href="javascript:doSort('IsAdmin')">Is Admin</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Model.Users)
+                {
+                    <tr>
+                        <td><a href="@Url.Action("Edit", "Example", new {id=user.UserId})">@user.FullName</a></td>
+                        <td>@user.UserName</td>
+                        <td>@(user.IsAdmin == true ? "Yes" : "No")</td>
+                    </tr>
+                }
+                @Html.Raw(Html.PagerRowGetHtml(3, false))
+            </tbody>
+        </table>
+    </div>
+</div>
